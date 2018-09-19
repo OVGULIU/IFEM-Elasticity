@@ -1,0 +1,42 @@
+ImageMaterial.xinp
+
+Input file: ImageMaterial.xinp
+Equation solver: 2
+Number of Gauss points: 4
+Solution component output zero tolerance: 1e-06
+Parsing input file ImageMaterial.xinp
+Parsing <geometry>
+  Parsing <patchfile>
+Parsing <boundaryconditions>
+  Parsing <propertycodes>
+  Parsing <dirichlet>
+	Dirichlet code 12: (fixed)
+  Parsing <neumann>
+	Neumann code 1000000 direction 1: 1
+Parsing <elasticity>
+  Parsing <texturematerial>
+	Material code 0: 1000 0.4 1
+ 1 0.3 1
+Parsing input file succeeded.
+Equation solver: 2
+Number of Gauss points: 4
+Problem definition:
+Elasticity: 2D, gravity = 0 0
+LinIsotropic: plane stress, E = 1000, nu = 0.4, rho = 1, alpha = 1.2e-07
+Resolving Dirichlet boundary conditions
+	Constraining P1 E2 in direction(s) 12
+ >>> SAM model summary <<<
+Number of elements    576
+Number of nodes       700
+Number of dofs        1400
+Number of unknowns    1350
+Number of quadrature points 9216 96
+Solving the equation system ...
+	Condition number: 1.54608e+08
+ >>> Solution summary <<<
+L2-norm            : 12.8843
+Max X-displacement : 29.3948
+Max Y-displacement : 30.7074
+Integrating solution norms (FE solution) ...
+Energy norm |u^h| = a(u^h,u^h)^0.5   : 5.36807
+External energy ((f,u^h)+(t,u^h)^0.5 : 5.36807

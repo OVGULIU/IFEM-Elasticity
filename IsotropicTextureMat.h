@@ -76,7 +76,7 @@ protected:
     double a;
   };
   std::map<std::pair<double,double>,LinIsotropic> materials; //!< Material for different texture regions. 
-  std::vector<std::vector<struct rgba> > textureData;
+  std::vector<std::vector<std::array<double,4> > > textureData;
 
 private:
   //! \brief Locates the appropriate material as indicated by texture.

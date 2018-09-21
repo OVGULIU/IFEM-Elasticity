@@ -36,16 +36,15 @@ void IsotropicTextureMat::parse (const TiXmlElement* elem)
     std::cerr << "File not found: " << textureFile << std::endl;
     return;
   }
-  textureData.resize(width, std::vector<struct rgba>(height));
+  textureData.resize(width, std::vector<std::array<double,4> >(height));
   const unsigned char* data = image;
   for(int j=0; j<height; ++j) {
     for(int i=0; i<width; ++i) {
-      double *vp[] = {&textureData[i][j].r, &textureData[i][j].g, &textureData[i][j].b, &textureData[i][j].a};
       for(int c=0; c<nrChannels; c++) {
-        *vp[c] = double(*data++) / 255.0;
+        textureData[i][j][c] = double(*data++) / 255.0;
       }
       for(int c=nrChannels; c<4; c++) {
-        *vp[c] = *vp[nrChannels-1];
+        textureData[i][j][c] = textureData[i][j][c];
       }
     }
   }
@@ -100,7 +99,7 @@ double IsotropicTextureMat::findIntensity (const FiniteElement& fe) const
     std::cerr << "Texture index out of bounds" << std::endl;
     return -1;
   }
-  return textureData[i][j].r;
+  return textureData[i][j][0];
 }
 
 

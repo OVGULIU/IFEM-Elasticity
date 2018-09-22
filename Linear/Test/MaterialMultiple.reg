@@ -1,10 +1,10 @@
-MultipleMaterial.xinp
+MaterialMultiple.xinp
 
-Input file: MultipleMaterial.xinp
+Input file: MaterialMultiple.xinp
 Equation solver: 2
 Number of Gauss points: 4
 Solution component output zero tolerance: 1e-06
-Parsing input file MultipleMaterial.xinp
+Parsing input file MaterialMultiple.xinp
 Parsing <geometry>
   Parsing <patchfile>
 	Reading data file quarter-disk-9patch.g2
@@ -22,7 +22,7 @@ Parsing <boundaryconditions>
 	Neumann code 1000000 direction 1: 1
 Parsing <elasticity>
   Parsing <isotropic>
-	Material code 0: 1 0.3 1
+	Material code 0: 1 0.4 1
   Parsing <isotropic>
 	Material code 1: 1000 0.4 1
 Parsing input file succeeded.
@@ -30,8 +30,6 @@ Equation solver: 2
 Number of Gauss points: 4
 Problem definition:
 Elasticity: 2D, gravity = 0 0
-LinIsotropic: plane stress, E = 1000, nu = 0.4, rho = 1, alpha = 1.2e-07
-Renumbered 601 nodes.
 Resolving Dirichlet boundary conditions
 	Constraining P7 E2 in direction(s) 12
 	Constraining P8 E2 in direction(s) 12
@@ -43,11 +41,11 @@ Number of dofs        1400
 Number of unknowns    1350
 Number of quadrature points 9216 96
 Solving the equation system ...
-	Condition number: 1.54608e+08
+	Condition number: 1.57668e+08
  >>> Solution summary <<<
-L2-norm            : 12.8843
-Max X-displacement : 29.3948
-Max Y-displacement : 30.7074
+L2-norm            : 12.8735
+Max X-displacement : 29.4324
+Max Y-displacement : 30.7243
 Integrating solution norms (FE solution) ...
-Energy norm |u^h| = a(u^h,u^h)^0.5   : 5.36807
-External energy ((f,u^h)+(t,u^h)^0.5 : 5.36807
+Energy norm |u^h| = a(u^h,u^h)^0.5   : 5.3714
+External energy ((f,u^h)+(t,u^h)^0.5 : 5.3714

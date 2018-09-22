@@ -15,7 +15,6 @@ Parsing <geometry>
 	               most_patches (1,0,2D) (2,0,2D) (3,0,2D) (4,0,2D) (6,0,2D) (7,0,2D) (8,0,2D) (9,0,2D)
   Parsing <patchfile>
 Parsing <boundaryconditions>
-  Parsing <propertycodes>
   Parsing <dirichlet>
 	Dirichlet code 12: (fixed)
   Parsing <neumann>
